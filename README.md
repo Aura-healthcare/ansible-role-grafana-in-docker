@@ -15,9 +15,10 @@ Role Variables
 ### Mandatory variables (Grafana will not be connected to any database if those are not set)
 The following variables should be set to specify the datasources Grafana should connect to :
 ```yaml
-datasources: [] # datasources is a list of dictionaries containing the following keys : datasource_type, datasource_database, datasource_hostname and datasource_port
+datasources: [] # datasources is a list of dictionaries containing the following keys : datasource_name, datasource_type, datasource_database, datasource_hostname and datasource_port
 ```
 Some more explanations :
+datasource_name: "" # must be unique, but whatever you like
 datasource_type: "" # can be CloudWatch, Elasticsearch, Graphite, InfluxDB, MySQL, OpenTSDB, PostgreSQL or Prometheus
 datasource_database: ""
 datasource_hostname: "" # hostname of the server the db is running on
